@@ -1,17 +1,137 @@
-<!DOCTYPE html>   <!-- This is a -->
+<!doctype html>
+<!-- This is a -->
 <html lang="en">
-
-<head>
+  <head>
     <title>Tags in HTML</title>
-</head>
+  </head>
 
-<body>
-    <h1>hello world</h1>
+  <body>
+    <!-- Semantic tags-->
+    <!-- In html,there is a total 6 heading tags from h1 to h6--->
+    <h1>This is a heading tag h1</h1>
+    <h2>This is a heading tag h2</h2>
+    <h3>This is a heading tag h3</h3>
+    <h4>This is a heading tag h4</h4>
+    <h5>This is a heading tag h5</h5>
+    <h6>This is a heading tag h6</h6>
 
-    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio quos soluta ullam animi suscipit nobis! Quo quasi
-        minus voluptas ratione recusandae illo! Excepturi nesciunt earum, molestiae, ab quia at maxime ullam, fuga
-        beatae libero vel voluptate commodi incidunt odit totam!</p>
+    <h7>
+      if you write h7 tag, it will not visible because because html supports
+      only h1 to h6 tag. the h7 tag are work as a paragraph tag
+    </h7>
 
-</body>
+    <p>
+      <!-- This is a paragraph tag-->
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio quos soluta
+      ullam animi suscipit nobis! Quo quasi minus voluptas ratione recusandae
+      illo! Excepturi nesciunt earum, molestiae, ab quia at maxime ullam, fuga
+      beatae libero vel voluptate commodi incidunt odit totam!
+    </p>
 
+    <!--list in html-->
+
+    <ul>
+      <li>Maggi</li>
+      <li>Lays</li>
+      <li>chips</li>
+    </ul>
+
+    <ol>
+      <li>Labelling</li>
+      <li>Styling</li>
+      <li>Brain</li>
+    </ol>
+
+    <dl>
+      <dt>This is description Term</dt>
+      <dd>This is description definition</dd>
+    </dl>
+    <!-- Tables in html-->
+    <table border="2">
+      <thead>
+        <tr>
+          <th>Product Id</th>
+          <th>Product Name</th>
+          <th>Product Qualit</th>
+          <th>product Quantity</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr>
+          <th>1</th>
+          <td>Wheat</td>
+          <td>Good</td>
+          <td>1kg</td>
+        </tr>
+        <tr>
+          <th>2</th>
+          <td>Rice</td>
+          <td>good</td>
+          <td>2kg</td>
+        </tr>
+
+        <tr>
+          <th>3</th>
+          <td>Roti</td>
+          <td>good</td>
+          <td>5kg</td>
+        </tr>
+
+        <tr>
+          <th>4</th>
+          <td>Atta</td>
+          <td>good</td>
+          <td>5kg</td>
+        </tr>
+        <tr>
+          <th>5</th>
+          <td>Biscuit</td>
+          <td>good</td>
+          <td>10kg</td>
+        </tr>
+
+        <tr>
+          <th>6</th>
+          <td>Breads</td>
+          <td>good</td>
+          <td>12kg</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!--Forms in html-->
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" />
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" />
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" />
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message"></textarea>
+
+      <label for="gender">Gender:</label>
+      <input type="radio" id="gender" name="gender" />
+      <label for="female">Female:</label>
+      <input type="radio" id="female" name="female" />
+
+      <label for="hobbies">Hobbies:</label>
+      <input type="checkbox" id="hobbies" name="hobbies" />
+      <label for="reading">Reading:</label>
+      <input type="checkbox" id="reading" name="reading" />
+
+      <label for="country">Country:</label>
+      <select id="country" name="country">
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+      </select>
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
 </html>
