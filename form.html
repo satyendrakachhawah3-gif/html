@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>College Exam Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f4f4f4;
+      }
+
+      .container {
+        width: 600px;
+        margin: 30px auto;
+        background: white;
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      }
+
+      h2 {
+        text-align: center;
+        color: #333;
+      }
+
+      label {
+        font-weight: bold;
+        display: block;
+        margin-top: 10px;
+      }
+
+      input,
+      select,
+      textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      .radio-group,
+      .checkbox-group {
+        margin-top: 5px;
+      }
+
+      .radio-group input,
+      .checkbox-group input {
+        width: auto;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>College Exam Registration Form</h2>
+
+      <form>
+        <label>Student Name</label>
+        <input type="text" placeholder="Enter Full Name" required />
+
+        <label>Enrollment Number</label>
+        <input type="text" placeholder="Enter Enrollment Number" required />
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter Email" required />
+
+        <label>Mobile Number</label>
+        <input type="tel" placeholder="Enter Mobile Number" required />
+
+        <label>Date of Birth</label>
+        <input type="date" required />
+
+        <label>Gender</label>
+        <div class="radio-group">
+          <input type="radio" name="gender" /> Male
+          <input type="radio" name="gender" /> Female
+          <input type="radio" name="gender" /> Other
+        </div>
+
+        <label>Course</label>
+        <select required>
+          <option value="">Select Course</option>
+          <option>BCA</option>
+          <option>BSc</option>
+          <option>BCom</option>
+          <option>BBA</option>
+          <option>MCA</option>
+        </select>
+
+        <label>Semester</label>
+        <select required>
+          <option value="">Select Semester</option>
+          <option>1st Semester</option>
+          <option>2nd Semester</option>
+          <option>3rd Semester</option>
+          <option>4th Semester</option>
+          <option>5th Semester</option>
+          <option>6th Semester</option>
+        </select>
+
+        <label>Subjects Appearing For</label>
+        <div class="checkbox-group">
+          <input type="checkbox" /> Mathematics <br />
+          <input type="checkbox" /> Database Management System <br />
+          <input type="checkbox" /> Operating System <br />
+          <input type="checkbox" /> Computer Networks <br />
+          <input type="checkbox" /> Java Programming
+        </div>
+
+        <label>Address</label>
+        <textarea rows="4" placeholder="Enter Address"></textarea>
+
+        <label>Upload Photograph</label>
+        <input type="file" />
+
+        <label>Upload Signature</label>
+        <input type="file" />
+
+        <button type="submit">Register for Exam</button>
+      </form>
+    </div>
+  </body>
+</html>
