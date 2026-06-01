@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Menu</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        background: #f4f4f4;
+      }
+
+      header {
+        background: #ff6b35;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+
+      .container {
+        width: 80%;
+        margin: 30px auto;
+      }
+
+      .menu-section {
+        background: white;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+      }
+
+      .menu-section h2 {
+        color: #ff6b35;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #ff6b35;
+        padding-bottom: 5px;
+      }
+
+      .menu-item {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .menu-item:last-child {
+        border-bottom: none;
+      }
+
+      .price {
+        font-weight: bold;
+        color: green;
+      }
+
+      footer {
+        text-align: center;
+        background: #333;
+        color: white;
+        padding: 15px;
+        margin-top: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>🍽️ Delicious Restaurant</h1>
+      <p>Fresh Food • Great Taste</p>
+    </header>
+
+    <div class="container">
+      <div class="menu-section">
+        <h2>🥗 Starters</h2>
+
+        <div class="menu-item">
+          <span>Paneer Tikka</span>
+          <span class="price">₹180</span>
+        </div>
+
+        <div class="menu-item">
+          <span>Veg Spring Roll</span>
+          <span class="price">₹150</span>
+        </div>
+
+        <div class="menu-item">
+          <span>French Fries</span>
+          <span class="price">₹120</span>
+        </div>
+      </div>
+
+      <div class="menu-section">
+        <h2>🍛 Main Course</h2>
+
+        <div class="menu-item">
+          <span>Butter Paneer Masala</span>
+          <span class="price">₹250</span>
+        </div>
+
+        <div class="menu-item">
+          <span>Dal Makhani</span>
+          <span class="price">₹220</span>
+        </div>
+
+        <div class="menu-item">
+          <span>Veg Biryani</span>
+          <span class="price">₹240</span>
+        </div>
+      </div>
+
+      <div class="menu-section">
+        <h2>🥤 Beverages</h2>
+
+        <div class="menu-item">
+          <span>Cold Coffee</span>
+          <span class="price">₹90</span>
+        </div>
+
+        <div class="menu-item">
+          <span>Mango Shake</span>
+          <span class="price">₹80</span>
+        </div>
+
+        <div class="menu-item">
+          <span>Fresh Lime Soda</span>
+          <span class="price">₹70</span>
+        </div>
+      </div>
+
+      <div class="menu-section">
+        <h2>🍰 Desserts</h2>
+
+        <div class="menu-item">
+          <span>Chocolate Cake</span>
+          <span class="price">₹110</span>
+        </div>
+
+        <div class="menu-item">
+          <span>Ice Cream</span>
+          <span class="price">₹80</span>
+        </div>
+
+        <div class="menu-item">
+          <span>Gulab Jamun</span>
+          <span class="price">₹60</span>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© 2026 Delicious Restaurant | Contact: +91 9876543210</p>
+    </footer>
+  </body>
+</html>
