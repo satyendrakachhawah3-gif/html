@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TCS NextStep - Student Registration</title>
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="tcs_registration.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="card">
+        <!-- Overlay for successful submission -->
+        <div class="success-overlay" id="successOverlay">
+          <div class="success-icon">✓</div>
+          <h3>Registration Successful!</h3>
+          <p
+            style="
+              color: var(--text-muted);
+              margin-top: 0.5rem;
+              text-align: center;
+              font-size: 0.875rem;
+            "
+          >
+            Please check your email for further instructions.
+          </p>
+          <button
+            class="btn-submit"
+            style="width: auto; padding: 0.5rem 2rem; margin-top: 1.5rem"
+            onclick="location.reload()"
+          >
+            Done
+          </button>
+        </div>
+
+        <div class="card-header">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/Tata_Consultancy_Services_old_logo.svg/1280px-Tata_Consultancy_Services_old_logo.svg.png"
+            alt=""
+            class="logo"
+          />
+          <h1 class="card-title">Student Registration</h1>
+          <p class="card-subtitle">Join the TCS NextStep Program</p>
+        </div>
+
+        <div class="card-body">
+          <form id="registrationForm" onsubmit="handleRegistration(event)">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input
+                type="text"
+                id="fullName"
+                class="form-control"
+                placeholder="John Doe"
+                required
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                class="form-control"
+                placeholder="john.doe@example.com"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  class="form-control"
+                  placeholder="+91 xxxxx xxxxx"
+                  pattern="[\+]?[0-9\s-]{10,14}"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" class="form-control" required />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="degree">Highest Qualification / Degree</label>
+              <select id="degree" class="form-control" required>
+                <option value="" disabled selected>Select your degree</option>
+                <option value="btech">B.Tech / B.E.</option>
+                <option value="mtech">M.Tech / M.E.</option>
+                <option value="mca">MCA</option>
+                <option value="bsc">B.Sc / BCA</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="year">Year of Passing</label>
+              <select id="year" class="form-control" required>
+                <option value="" disabled selected>Select year</option>
+                <option value="2024">2024</option>
+                <option value="2025">2025</option>
+                <option value="2026">2026</option>
+                <option value="2027">2027</option>
+              </select>
+            </div>
+
+            <button type="submit" class="btn-submit">Register Now</button>
+
+            <div class="login-link">
+              Already have an account? <a href="#">Login here</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      function handleRegistration(event) {
+        event.preventDefault();
+
+        // Get the submit button to show a loading state
+        const btn = event.target.querySelector(".btn-submit");
+        const originalText = btn.innerHTML;
+
+        // Simple visual loading effect
+        btn.innerHTML =
+          '<span style="display:inline-block; animation: spin 1s linear infinite;">↻</span> Processing...';
+        btn.style.opacity = "0.8";
+        btn.disabled = true;
+
+        // Simulate API call delay
+        setTimeout(() => {
+          document.getElementById("successOverlay").classList.add("active");
+        }, 1500);
+      }
+
+      // Add keyframes for loading spinner dynamically
+      const style = document.createElement("style");
+      style.textContent = `
+            @keyframes spin { 
+                100% { transform: rotate(360deg); } 
+            }
+        `;
+      document.head.appendChild(style);
+    </script>
+  </body>
+</html>
