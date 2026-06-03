@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Modal Deepfake Detection - Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="dashboard-page">
+    <header class="nav">
+      <div class="container nav-inner">
+        <h1 class="logo">Multi-Modal Deepfake Detection System</h1>
+        <nav class="nav-links">
+          <a href="index.html">Intro</a>
+          <a href="analysis.html">Analysis</a>
+          <a href="dashboard.html" class="active">Dashboard</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card result-banner">
+        <div>
+          <h2 class="section-title">Final Detection Result</h2>
+          <p id="overallVerdict" class="verdict fake">FAKE</p>
+          <p id="overallConfidence" class="subtitle">Confidence: 88%</p>
+        </div>
+        <div class="actions">
+          <a class="btn ghost" href="analysis.html">Back to Analysis</a>
+          <button id="downloadBtn" class="btn">Download Report</button>
+        </div>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="card">
+          <h3 class="section-title">Metrics Breakdown</h3>
+          <div class="metric" id="metricText">
+            <div class="metric-label">
+              <span>Text Score</span><strong id="textScoreLabel">80%</strong>
+            </div>
+            <div class="bar"><span id="textBar" style="width: 80%"></span></div>
+          </div>
+          <div class="metric" id="metricImage">
+            <div class="metric-label">
+              <span>Image Score</span><strong id="imageScoreLabel">90%</strong>
+            </div>
+            <div class="bar">
+              <span id="imageBar" style="width: 90%"></span>
+            </div>
+          </div>
+          <div class="metric" id="metricVideo">
+            <div class="metric-label">
+              <span>Video Score</span><strong id="videoScoreLabel">86%</strong>
+            </div>
+            <div class="bar">
+              <span id="videoBar" style="width: 86%"></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3 class="section-title">Detection Insights</h3>
+          <ul id="insightsList" class="summary-list">
+            <li>Potential linguistic sensationalism detected in text input.</li>
+            <li>
+              Image shows localized manipulation artifacts near face region.
+            </li>
+            <li>
+              Video indicates slight temporal inconsistencies in lip motion.
+            </li>
+          </ul>
+        </article>
+      </section>
+    </main>
+
+    <p class="footer-note">
+      Dashboard updates dynamically from your analysis page.
+    </p>
+    <script src="script.js"></script>
+  </body>
+</html>

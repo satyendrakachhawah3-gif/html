@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Modal Deepfake Detection-Intro</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="container nav-inner">
+        <h1 class="logo">Multi-Modal Deepfake Detection System</h1>
+        <nav class="nav-links">
+          <a href="index.html" class="active">Intro</a>
+          <a href="analysis.html">Analysis</a>
+          <a href="dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <article class="card">
+          <h2>Detect Manipulated Media Using Text, Image, and Video Signals</h2>
+          <p class="subtitle">
+            This one-page introduction explains your project goal. The system
+            supports multi-model checking where each media type is scored
+            independently and then merged into one final confidence score.
+          </p>
+          <div class="actions">
+            <a class="btn" href="analysis.html">Start Analysis</a>
+            <a class="btn ghost" href="dashboard.html">View Dashboard</a>
+          </div>
+        </article>
+
+        <aside class="card stats">
+          <div class="stat">
+            <h3>Supported Input Types</h3>
+            <strong>Text + Image + Video</strong>
+          </div>
+          <div class="stat">
+            <h3>Fusion Strategy</h3>
+            <strong>Weighted Confidence Aggregation</strong>
+          </div>
+          <div class="stat">
+            <h3>Output</h3>
+            <strong>Real / Fake + Explainable Metrics</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section class="card" style="margin-top: 14px">
+        <h3 class="section-title">System Modules</h3>
+        <div class="feature-grid">
+          <article class="feature card">
+            <h3>Text Analysis</h3>
+            <p>
+              NLP-based inspection of suspicious words, emotional tone, and
+              sensational claims that often appear in fake narratives.
+            </p>
+          </article>
+          <article class="feature card">
+            <h3>Image Analysis</h3>
+            <p>
+              CNN and visual forensics look for blending artifacts, skin tone
+              mismatch, edge anomalies, and face tampering traces.
+            </p>
+          </article>
+          <article class="feature card">
+            <h3>Video Analysis</h3>
+            <p>
+              Frame-level and temporal checks identify lip-sync mismatch,
+              unnatural motion, and inconsistent illumination across frames.
+            </p>
+          </article>
+        </div>
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

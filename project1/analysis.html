@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multi-Modal Deepfake Detection - Analysis</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="container nav-inner">
+        <h1 class="logo">Multi-Modal Deepfake Detection System</h1>
+        <nav class="nav-links">
+          <a href="index.html">Intro</a>
+          <a href="analysis.html" class="active">Analysis</a>
+          <a href="dashboard.html">Dashboard</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="card">
+        <h2 class="section-title">Upload Inputs for Multi-Model Analysis</h2>
+        <p class="subtitle">
+          Select which modalities you want to analyze (Text / Image / Video),
+          then upload the required input(s). Click "Run Analysis" to generate
+          prediction scores and move to the dashboard.
+        </p>
+
+        <div class="choice-row" aria-label="Select modalities">
+          <label class="choice">
+            <input id="useTextChoice" type="checkbox" checked />
+            <span>Text Analysis</span>
+          </label>
+          <label class="choice">
+            <input id="useImageChoice" type="checkbox" checked />
+            <span>Image Analysis</span>
+          </label>
+          <label class="choice">
+            <input id="useVideoChoice" type="checkbox" checked />
+            <span>Video Analysis</span>
+          </label>
+        </div>
+
+        <div class="analysis-grid">
+          <article class="card">
+            <label class="field-label" for="textInput">Text Input</label>
+            <textarea
+              id="textInput"
+              placeholder="Paste news headline, social media post, or transcript..."
+            ></textarea>
+          </article>
+
+          <article class="card">
+            <label class="field-label" for="imageInput">Image Upload</label>
+            <input id="imageInput" type="file" accept="image/*" />
+            <div id="imagePreview" class="preview">Image preview</div>
+          </article>
+
+          <article class="card">
+            <label class="field-label" for="videoInput">Video Upload</label>
+            <input id="videoInput" type="file" accept="video/*" />
+            <div id="videoPreview" class="preview">Video preview</div>
+          </article>
+        </div>
+
+        <div class="actions">
+          <button id="runAnalysisBtn" class="btn">Run Analysis</button>
+          <button id="clearBtn" class="btn ghost">Clear</button>
+        </div>
+      </section>
+    </main>
+
+    <p class="footer-note">Use sample files for demo scoring in this UI.</p>
+    <script src="script.js"></script>
+  </body>
+</html>
