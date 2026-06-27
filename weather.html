@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather Forecasting</title>
+  <link rel="stylesheet" href="weather.css">
+</head>
+<body>
+
+  <div class="weather-app">
+    <div class="search-box">
+      <input type="text" id="cityInput" placeholder="Enter city name..." autocomplete="off">
+      <button id="searchBtn">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </button>
+    </div>
+
+    <div class="loader-container" id="loader">
+      <div class="spinner"></div>
+    </div>
+
+    <div class="error-message" id="errorMessage">City not found. Please try again.</div>
+
+    <div class="weather-data hidden" id="weatherData">
+      <div class="main-info">
+        <h2 id="cityName">London</h2>
+        <div class="weather-icon" id="weatherIcon">☀️</div>
+        <div class="temperature" id="temperature">22°C</div>
+        <div class="condition" id="condition">Sunny</div>
+      </div>
+
+      <div class="details-grid">
+        <div class="detail-card">
+          <div class="detail-icon">💨</div>
+          <div class="detail-value" id="windSpeed">15 km/h</div>
+          <div class="detail-label">Wind Speed</div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">💧</div>
+          <div class="detail-value" id="humidity">45%</div>
+          <div class="detail-label">Humidity</div>
+        </div>
+        <div class="detail-card">
+          <div class="detail-icon">🌡️</div>
+          <div class="detail-value" id="feelsLike">24°C</div>
+          <div class="detail-label">Apparent Temp</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="weather.js"></script>
+</body>
+</html>
