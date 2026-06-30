@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Final Form</title>
+  </head>
+  <body>
+    <h1>Event Registration</h1>
+
+    <label for="text">Name:</label>
+    <br />
+    <input type="name" name="fullname" id="name" />
+    <br />
+    <br />
+    <label for="email">Email:</label>
+    <br />
+    <input type="text" name="email" id="email" />
+    <br />
+    <br />
+    <label for="phone">phone:</label>
+    <br />
+    <input
+      type="tel"
+      name="phone"
+      id="phone"
+      pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+      required
+    />
+    <br />
+    <br />
+    <label for="occupationType" name="occupation">Occupation:</label>
+    <select id="occupationType" name="occupation">
+      <option value="student">Student</option>
+      <option value="teacher">Teacher</option>
+      <option value="doctor">Doctor</option>
+      <option value="engineer">Engineer</option>
+      <option value="other">Other</option>
+    </select>
+    <br />
+    <br />
+    <fieldset>
+      <legend>Topic of Interest:</legend>
+
+      <label for="HTML">HTML</label>
+      <input type="checkbox" name="HTML" id="HTML" />
+      <br />
+      <br />
+      <label for="CSS">CSS</label>
+      <input type="checkbox" name="CSS" id="CSS" />
+      <br />
+      <br />
+      <label for="Javascript">Javascript</label>
+      <input type="checkbox" name="Javascript" id="Javascript" />
+    </fieldset>
+    <br />
+    <br />
+    <label for="Comments">Comments</label>
+    <br />
+    <textarea name="textarea" id="Comments" cols="30" rows="10"> </textarea>
+    <br />
+    <input type="button" value="register" />
+  </body>
+</html>
